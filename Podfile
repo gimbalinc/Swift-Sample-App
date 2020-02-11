@@ -1,12 +1,11 @@
-# Uncomment this line to define a global platform for your project
-platform :ios, '9.0'
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
 
-target 'hello-gimbal-swift' do
-  # Comment this line if you're not using Swift and don't want to use dynamic frameworks
+target 'Gimbal iOS Sample App Test' do
+  # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for hello-gimbal-swift
+  # Pods for Gimbal iOS Sample App Test
   pod 'Gimbal'
-  pod 'Amplitude-iOS', '~> 4.0.4'
-
+  
 end

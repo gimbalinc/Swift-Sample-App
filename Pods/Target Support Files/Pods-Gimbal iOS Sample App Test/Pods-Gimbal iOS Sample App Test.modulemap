@@ -1,0 +1,6 @@
+framework module Pods_Gimbal_iOS_Sample_App_Test {
+  umbrella header "Pods-Gimbal iOS Sample App Test-umbrella.h"
+
+  export *
+  module * { export * }
+}

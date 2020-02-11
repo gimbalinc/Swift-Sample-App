@@ -8,13 +8,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     var window: UIWindow?
     
-    @objc(application:didFinishLaunchingWithOptions:) func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]?) -> Bool {
+    @objc(application:didFinishLaunchingWithOptions:) internal func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]?) -> Bool {
         application.registerUserNotificationSettings(UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil))
         
-        if #available(iOS 10.0, *){
             notificationCenter = UNUserNotificationCenter.current()
             notificationCenter.delegate = self as UNUserNotificationCenterDelegate
-        }
+        
+        Gimbal.setAPIKey("PASTE YOUR APPLICATION API KEY HERE", options: nil)
         
         return true
     }

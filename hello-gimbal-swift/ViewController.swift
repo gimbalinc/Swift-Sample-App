@@ -5,10 +5,8 @@ class ViewController: UITableViewController, GMBLPlaceManagerDelegate, GMBLCommu
     var placeManager: GMBLPlaceManager!
     var communicationManager: GMBLCommunicationManager!
     var placeEvents : [GMBLVisit] = []
-    
+
     override func viewDidLoad() -> Void {
-        Gimbal.setAPIKey("PUT_YOUR_GIMBAL_API_KEY_HERE", options: nil)
-        
         placeManager = GMBLPlaceManager()
         self.placeManager.delegate = self
         
@@ -19,15 +17,16 @@ class ViewController: UITableViewController, GMBLPlaceManagerDelegate, GMBLCommu
     }
     
     func placeManager(_ manager: GMBLPlaceManager!, didBegin visit: GMBLVisit!) -> Void {
-        NSLog("Begin %@", visit.place.description)
+        print("Begin %@", visit.place.description)
         self.placeEvents.insert(visit, at: 0)
-        self.tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with:UITableViewRowAnimation.automatic)
+        self.tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with:UITableView.RowAnimation.automatic)
+
     }
     
     func placeManager(_ manager: GMBLPlaceManager!, didEnd visit: GMBLVisit!) -> Void {
         NSLog("End %@", visit.place.description)
         self.placeEvents.insert(visit, at: 0)
-        self.tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: UITableViewRowAnimation.automatic)
+        self.tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: UITableView.RowAnimation.automatic)
     }
     
     func communicationManager(_ manager: GMBLCommunicationManager!, presentLocalNotificationsForCommunications communications: [Any]!, for visit: GMBLVisit!) -> [Any]! {

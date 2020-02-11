@@ -1,0 +1,16 @@
+PODS:
+  - Gimbal (2.83.1)
+
+DEPENDENCIES:
+  - Gimbal
+
+SPEC REPOS:
+  trunk:
+    - Gimbal
+
+SPEC CHECKSUMS:
+  Gimbal: c95a6b8ed9459a176ca3417aa494fc05fae2458f
+
+PODFILE CHECKSUM: 4ea2df895317a77258e8f46c676e90aebf74d2fd
+
+COCOAPODS: 1.8.4
