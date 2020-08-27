@@ -31,7 +31,6 @@
 		74E354A61B4EF71C00356163 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		74E354A81B4EF71C00356163 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		74E354AB1B4EF71C00356163 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		74E354CE1B4F076300356163 /* GimbalObjectiveCBridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GimbalObjectiveCBridgingHeader.h; sourceTree = "<group>"; };
 		A773C4370670DDB2C9E1F0BE /* Pods-Gimbal iOS Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gimbal iOS Test.release.xcconfig"; path = "Target Support Files/Pods-Gimbal iOS Test/Pods-Gimbal iOS Test.release.xcconfig"; sourceTree = "<group>"; };
 		ED050DC91BEBD9E200CC65A0 /* Gimbal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Gimbal.framework; sourceTree = "<group>"; };
 		ED050DCB1BEBDAC200CC65A0 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -99,7 +98,6 @@
 			children = (
 				74E354A11B4EF71C00356163 /* AppDelegate.swift */,
 				74E354A31B4EF71C00356163 /* ViewController.swift */,
-				74E354CE1B4F076300356163 /* GimbalObjectiveCBridgingHeader.h */,
 				74E354A51B4EF71C00356163 /* Main.storyboard */,
 				74E354A81B4EF71C00356163 /* Images.xcassets */,
 				74E354AA1B4EF71C00356163 /* LaunchScreen.xib */,
@@ -128,7 +126,7 @@
 				74E354981B4EF71C00356163 /* Sources */,
 				74E354991B4EF71C00356163 /* Frameworks */,
 				74E3549A1B4EF71C00356163 /* Resources */,
-				05693E4608959231B501BF73 /* [CP] Embed Pods Frameworks */,
+				EB6310B21D999E8C76DBCADF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,7 +150,6 @@
 				TargetAttributes = {
 					74E3549B1B4EF71C00356163 = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = 3ETG9R4M5P;
 						LastSwiftMigration = 0800;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -195,24 +192,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		05693E4608959231B501BF73 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Gimbal iOS Sample App Test/Pods-Gimbal iOS Sample App Test-frameworks.sh",
-				"${PODS_ROOT}/Gimbal/Frameworks/Gimbal.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Gimbal.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gimbal iOS Sample App Test/Pods-Gimbal iOS Sample App Test-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		6EFA6FFD858D8D2D97B4817B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -233,6 +212,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB6310B21D999E8C76DBCADF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Gimbal iOS Sample App Test/Pods-Gimbal iOS Sample App Test-frameworks.sh",
+				"${PODS_ROOT}/Gimbal/Frameworks/Gimbal.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Gimbal.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gimbal iOS Sample App Test/Pods-Gimbal iOS Sample App Test-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -386,6 +383,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -396,9 +394,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.gimbal.iossampleapp;
 				PRODUCT_NAME = "Gimbal iOS Sample App";
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "hello-gimbal-swift/GimbalObjectiveCBridgingHeader.h";
-				SWIFT_VERSION = 5.0;
-				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -410,6 +405,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -420,9 +416,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.gimbal.iossampleapp;
 				PRODUCT_NAME = "Gimbal iOS Sample App";
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "hello-gimbal-swift/GimbalObjectiveCBridgingHeader.h";
-				SWIFT_VERSION = 5.0;
-				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Release;
 		};
