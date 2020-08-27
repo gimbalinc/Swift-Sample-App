@@ -1,5 +1,6 @@
 import UIKit
 import UserNotifications
+import Gimbal
 
 @available(iOS 10.0, *)
 @UIApplicationMain
